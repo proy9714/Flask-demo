@@ -1,2 +1,2 @@
-# Flask-demo
-Basic CRUD operations in Flask
+# flask-demo
+Basic CRUD operations in flask
