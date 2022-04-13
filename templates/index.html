@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Users</title>
+    </head>
+    <body>
+        <form action="/create" method="post">
+            <input type="text" name="first_name">
+            <input type="text" name="last_name">
+            <button type="submit">Add User</button>
+        </form>
+        <ul>
+            <h1>Users:</h1>
+            {% for user in data %}
+            <li>{{ user._id }}</li>
+            <li>First name: {{ user.name }}</li>
+            <li>Last Name: {{ user.lastName }}</li>
+            <br>
+            <a href="/update_user/{{ user._id }}">Update</a>
+            <a href="/delete/{{ user._id }}">Delete</a>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

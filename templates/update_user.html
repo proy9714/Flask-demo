@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Users</title>
+    </head>
+    <body>
+        {% for user in data %}
+        <form action="/update/{{ user._id }}" method="post">
+            <input type="text" name="first_name" value="{{ user.name }}">
+            <input type="text" name="last_name" value="{{ user.lastName }}">
+            <button type="submit">Update User</button>
+        </form>
+        {% endfor %}
+    </body>
+</html>
